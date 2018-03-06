@@ -1,0 +1,12 @@
+server:
+  port: 9089
+spring:
+  cloud:
+    stream:
+      bindings:
+        register_source:
+          destination: cloud-stream
+  rabbitmq:
+    addresses: amqp://127.0.0.1:5672
+    username: guest
+    password: guest

@@ -1,0 +1,15 @@
+server:
+  port: 9081
+spring:
+  cloud:
+    stream:
+      bindings:
+        register_sink:
+          destination: cloud-stream
+          group: group2
+          consumer:
+            durableSubscription: true
+  rabbitmq:
+    addresses: amqp://127.0.0.1:5672
+    username: guest
+    password: guest
